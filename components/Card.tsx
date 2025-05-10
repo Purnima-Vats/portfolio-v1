@@ -1,0 +1,20 @@
+import React, { PropsWithChildren } from 'react'
+import { twMerge } from 'tailwind-merge'
+
+const Card = ({ classname, children }: PropsWithChildren<{
+    classname?: string
+}>) => {
+    return (
+        <div className={twMerge("bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none p-6", classname)}>
+            <div
+                className='absolute inset-0 -z-10 opacity-5'
+                style={{
+                    backgroundImage: "url('/assets/images/grainImage.jpg')",
+                }}
+            ></div>
+            {children}
+        </div>
+    )
+}
+
+export default Card
