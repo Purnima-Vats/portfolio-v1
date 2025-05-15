@@ -8,7 +8,7 @@ import CanvasLoader from "../Loader";
 
 // Ensure GLTF is typed correctly
 const Earth = () => {
-    const earth = useGLTF("./planet/scene.gltf") as any; // If you want strict types, see note below
+    const earth = useGLTF("./planet/scene.gltf"); // If you want strict types, see note below
 
     return (
         <primitive

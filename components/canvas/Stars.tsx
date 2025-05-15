@@ -1,26 +1,27 @@
 "use client";
 
-import { useState, useRef, Suspense, JSX } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
 import {
     Points as DreiPoints,
     PointMaterial,
     Preload,
 } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
 import * as random from "maath/random/dist/maath-random.esm";
-import { Points as ThreePoints } from "three";
+import { Suspense, useRef, useState } from "react";
+import { BufferGeometry, Material, Points } from "three";
 
-const Stars = (props: JSX.IntrinsicElements["points"]) => {
-    const ref = useRef(null);
+const Stars = () => {
+    // Fix the ref type to properly match the Points from three.js
+    const ref = useRef<Points<BufferGeometry, Material | Material[]>>(null);
+
     const [sphere] = useState<Float32Array>(() =>
         random.inSphere(new Float32Array(4500), { radius: 1.2 })
     );
 
     useFrame((_, delta) => {
-        const points = ref.current as ThreePoints;
-        if (points) {
-            points.rotation.x -= delta / 10;
-            points.rotation.y -= delta / 15;
+        if (ref.current) {
+            ref.current.rotation.x -= delta / 10;
+            ref.current.rotation.y -= delta / 15;
         }
     });
 
@@ -31,7 +32,6 @@ const Stars = (props: JSX.IntrinsicElements["points"]) => {
                 positions={sphere}
                 stride={3}
                 frustumCulled
-                {...props}
             >
                 <PointMaterial
                     transparent
@@ -59,3 +59,4 @@ const StarsCanvas = () => {
 };
 
 export default StarsCanvas;
+
