@@ -22,7 +22,7 @@ import {
     // horizon,
     // idyll,
     threejs,
-    apple,
+    // apple,
     carepulse,
     idyll_logo,
     // discord_clone,
@@ -356,29 +356,29 @@ const projects = [
         source_code_link: "https://github.com/Purnima-Vats/carepulse",
         live_link: "https://carepulse-patient.vercel.app",
     },
-    {
-        name: "Apple Website UI Clone",
-        description:
-            "Recreated the Apple iPhone 15 Pro product page using React.js, combining GSAP animations and Three.js for 3D models.",
-        tags: [
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "GSAP",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Three.js",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: apple,
-        source_code_link:
-            "https://github.com/Purnima-Vats/apple-iPhone15-clone",
-        live_link: "https://appoll.netlify.app",
-    },
+    // {
+    //     name: "Apple Website UI Clone",
+    //     description:
+    //         "Recreated the Apple iPhone 15 Pro product page using React.js, combining GSAP animations and Three.js for 3D models.",
+    //     tags: [
+    //         {
+    //             name: "react",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "GSAP",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "Three.js",
+    //             color: "pink-text-gradient",
+    //         },
+    //     ],
+    //     image: apple,
+    //     source_code_link:
+    //         "https://github.com/Purnima-Vats/apple-iPhone15-clone",
+    //     live_link: "https://appoll.netlify.app",
+    // },
 ];
 
 // const techStack = [
@@ -508,7 +508,7 @@ const techStack = {
         { name: "Express", link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" },
         { name: "Mongo DB", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" },
         { name: "MySQL", link: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Database-mysql.svg/1200px-Database-mysql.svg.png" },
-        { name: "Firebase", link: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" },
+        // { name: "Firebase", link: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" },
     ],
     toolsAndServices: [
         { name: "Git", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg" },

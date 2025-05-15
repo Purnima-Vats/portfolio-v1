@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,7 +26,7 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "About", href: "#about" },
-        { name: "Experience", href: "#experience" },
+        // { name: "Experience", href: "#experience" },
         { name: "Skills", href: "#skills" },
         { name: "Projects", href: "#projects" },
         { name: "Contact", href: "#contact" },
@@ -35,7 +36,7 @@ export default function Navbar() {
         <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "py-0" : "py-0")}>
             <nav
                 className={cn(
-                    "w-full px-6 md:px-8",
+                    "w-full px-6 md:px-8 max-w-7xl mx-auto",
                     "backdrop-blur-md bg-white/70 dark:bg-[#050816]/70",
                     "border-b border-gray-200/20 dark:border-[#050816]/30",
                     "shadow-sm",
@@ -44,8 +45,14 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="flex items-center">
-                            <span className="text-xl font-bold text-gray-900 dark:text-white">YourLogo</span>
+                        <Link href="/" className="flex items-center gap-2">
+                            <Image 
+                                src="/assets/logo.svg" 
+                                width={35} 
+                                height={3} 
+                                alt="logo" 
+                            />
+                            <span className="hidden md:block text-xl font-bold text-gray-900 dark:text-white">Purnima Vats</span>
                         </Link>
                     </div>
 
@@ -56,7 +63,7 @@ export default function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white font-medium transition-colors"
+                                    className="text-lg text-[#A49CBD]  dark:hover:text-white font-medium transition-colors"
                                 >
                                     {link.name}
                                 </Link>

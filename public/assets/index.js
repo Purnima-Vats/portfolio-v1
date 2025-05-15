@@ -20,6 +20,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import live from "./live.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -68,4 +69,5 @@ export {
   idyll_logo,
   discord_clone,
   hippo_ui,
+  live
 };
