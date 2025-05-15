@@ -44,7 +44,7 @@ const About = () => {
 
                     <Card classname="h-full md:h-[380px] xl:h-[320px] w-full p-0 lg:w-1/3 cursor-pointer ">
                         <Image
-                            src="/assets/images/map.png"
+                            src="/assets/map.png"
                             width={500}
                             height={500}
                             alt="hero"
