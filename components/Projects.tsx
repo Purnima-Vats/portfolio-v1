@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 import { styles } from "@/lib/styles";
 import { projects } from "@/lib/constants";
 
+// Note: Make sure to update your project data in constants.ts to include any additional fields
+// like longDescription, features, and technologies if you want to display them in the dialog
+
 const Projects = () => {
     return (
         <>
