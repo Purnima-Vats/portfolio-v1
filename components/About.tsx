@@ -48,7 +48,7 @@ const About = () => {
                             width={500}
                             height={500}
                             alt="hero"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover hover:scale-135 transition-all duration-400"
                         />
                     </Card>
                 </motion.div>

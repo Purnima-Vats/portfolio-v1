@@ -10,7 +10,6 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
 
-    // Handle scroll effect to add background when scrolling
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 10)
@@ -26,7 +25,6 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "About", href: "#about" },
-        // { name: "Experience", href: "#experience" },
         { name: "Skills", href: "#skills" },
         { name: "Projects", href: "#projects" },
         { name: "Contact", href: "#contact" },
@@ -36,13 +34,13 @@ export default function Navbar() {
         <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "py-0" : "py-0")}>
             <nav
                 className={cn(
-                    "w-full px-6 md:px-8 max-w-7xl mx-auto",
-                    "backdrop-blur-md bg-white/70 dark:bg-[#050816]/70",
-                    "border-b border-gray-200/20 dark:border-[#050816]/30",
+                    "w-full px-6 md:px-8 ",
+                    "backdrop-blur-md bg-[#050816]/70",
+                    "border-b border-[#050816]/30",
                     "shadow-sm",
                 )}
             >
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center justify-between h-16 max-w-7xl mx-auto">
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link href="/" className="flex items-center gap-2">
@@ -52,7 +50,7 @@ export default function Navbar() {
                                 height={3} 
                                 alt="logo" 
                             />
-                            <span className="hidden md:block text-xl font-bold text-gray-900 dark:text-white">Purnima Vats</span>
+                            <span className="hidden md:block text-xl font-bold text-white">Purnima Vats</span>
                         </Link>
                     </div>
 
@@ -63,7 +61,7 @@ export default function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-lg text-[#A49CBD]  dark:hover:text-white font-medium transition-colors"
+                                    className="text-lg text-[#A49CBD] hover:text-white font-medium transition-colors"
                                 >
                                     {link.name}
                                 </Link>
@@ -75,7 +73,7 @@ export default function Navbar() {
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white focus:outline-none"
                             aria-expanded="false"
                         >
                             <span className="sr-only">Open main menu</span>
@@ -100,7 +98,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100/50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700/50"
+                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {link.name}
@@ -112,3 +110,4 @@ export default function Navbar() {
         </header>
     )
 }
+

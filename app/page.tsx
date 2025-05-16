@@ -20,3 +20,9 @@ export default function Home() {
     </div>
   )
 }
+
+// Notes
+// 1. hero bg   
+// 2. about me section text animated  
+// 6. contact section animations
+// Project dialouge box

@@ -30,7 +30,7 @@ const ProjectCard = ({
     return (
         <motion.div
             variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-            className="bg-gray-800 sm:w-[360px] rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none p-6 cursor-pointer hover:scale-105 transition-all duration-300"
+            className="bg-gray-800 sm:w-[360px] rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none p-6 cursor-pointer hover:scale-105 hover:transition-all hover:duration-300"
         >
             <div className="relative w-full h-[230px]">
                 <Image
