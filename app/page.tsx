@@ -8,15 +8,18 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <div className="h-full -mt-16">
-      <HeroSection/>
+      <div className="relative z-0">
+        <HeroSection/>
+        <StarsCanvas />
+      </div>
       <About/>
       {/* <Experience/> */}
       <Skills/>
       <Projects/>
       <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+        <Contact />
+        <StarsCanvas />
+      </div>
     </div>
   )
 }

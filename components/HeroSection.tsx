@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
     return (
-        <div className="h-full md:h-screen mt-16 flex flex-col md:flex-row bg-[#050816] relative ">
+        <div className="h-full md:h-screen mt-16 flex flex-col md:flex-row relative z-10">
             {/* Neural Network Background */}
             <div className="h-screen flex flex-col justify-center w-screen md:w-1/2 md:m-5 text-white items-center relative z-10">
                 <div className="flex flex-col px-1">
